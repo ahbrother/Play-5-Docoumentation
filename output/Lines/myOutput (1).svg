@@ -1,0 +1,20 @@
+<!-- myOutput.svg -->
+<!-- Generated using p5.js v.2.3.4 and p5.plotSvg v.0.3.0: -->
+<!-- A Plotter-Oriented SVG Exporter for p5.js -->
+<!-- Tue Nov 10 2026 16:55:08 GMT+0100 (Mitteleuropäische Normalzeit) -->
+<!-- DPI: 96 -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="8.5in" height="11in" viewBox="0 0 816 1056">
+  <style>
+      circle, ellipse, line, path, polygon, polyline, rect, quad, text {
+        fill: none;
+        stroke: black;
+        stroke-width: 1;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        vector-effect: non-scaling-stroke;
+      }
+    </style>
+<rect x="408" y="528" width="200" height="20"/>
+<rect x="408" y="528" width="50" height="10"/>
+<rect x="458" y="528" width="30" height="30"/>
+</svg>

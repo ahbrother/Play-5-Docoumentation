@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patternTests</title>
+    <link rel="stylesheet" href="./output.css">
+    <script src="js/p5.min.js"></script>
+    <script src="js/p5.sound.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.plotsvg@latest/dist/p5.plotSvg.js"></script> -->
+    
+</head>
+<body class="grid grid-cols-12 grid-rows-auto gap-y-2">
+  
+    <div class="p-4 bg-black text-white col-span-12 grid grid-rows-3">
+        <h1 class="col-span-2 col-start-1 row-start-2 text-6xl font-black self-end">Play 5</h1>
+        <h1 class="col-span-2 col-start-1 row-start-2">Prozessdokumentation</h1>
+        <h3 class=" col-start-3 row-start-1">Student: <br> Modulleitung: <br> Mentorat: </h3>
+        <h3 class=" col-start-5 row-start-1">Gian Biswas <br> Michael Flückiger <br> Michael Flückiger </h3>
+        <h3 class=" col-start-3 col-span-3 row-start-3">26.10.2026 - 11.12.2026 <br> BA Data Design + Art, Hochschule Luzern – Design, Film, Kunst <br> © HSLU, 2026</h3>
+    </div>
+
+    <nav class="col-span-full p-4 flex justify-between underline">
+        <a href="#Inspirationswoche">Inspirationswoche</a>
+        <a>Woche 1</a>
+        <a>Woche 2</a>
+        <a>Woche 3</a>
+        <a>Woche 4</a>
+        <a>Woche 5</a>
+
+    </nav>
+        <p class="row-start-5 col-start-3 col-span-8">!!!DONT FORGET TO START THE WATCHER FOR TAILWIND!!!</p>
+
+    <!-- we can use grid-cols-subgrid to reference to the underlaying grid from the body.
+     its also important to note, that for each new section we need to create a new grid -->
+    <div class="Inspirationswoche bg-blue-50 grid grid-cols-subgrid col-span-12">
+        <h2 class="bg-black p-4 col-span-12 text-white text-xl">Inspirationswoche</h2>
+         <p class="p-4 col-span-8">To start things off, i focused on one specific form for each sketch. The goal was to just work with that form and see what happens. The first two sketches are Data-driven, the last one is just pure experimentation. Check out the README file for more information.</p>
+    </div>
+
+    <div class="grid grid-cols-subgrid grid-rows-2 col-span-12 p-4 gap-2 bg-blue-50">
+        <div class="col-span-4" id="sketch"></div>
+        <div class="col-span-4" id="newLines"></div>
+        <div class="col-span-4" id="interactiveLines"></div>
+        <div class="col-span-4" id="circles"></div>
+        <div class="col-span-4" id="sphere"></div>
+        <div class="col-span-4" id="ambientSphere"></div>
+    <!-- <div id="cylinder"></div> -->
+     <!-- <div id="sphereSVG"></div> -->
+
+    </div>
+
+
+    <script src="/sketches/sketch.js"></script>
+    <!-- <script src="LinesSketch.js"></script> -->
+    <script src="/sketches/newLines.js"></script>
+    <script src="/sketches/interactiveLines.js"></script>
+    <script src="/sketches/circles.js"></script>
+    <script src="/sketches/sphere.js"></script>
+    <script src="/sketches/ambientSphere.js"></script>
+    <!-- <script src="/sketches/cylinder.js"></script> -->
+     <!-- <script src="/sketches/sphereSVG.js"></script> -->
+     <!-- <script src="/sketches/svg.js"></script> -->
+</body>
+</html>
