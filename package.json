@@ -1,0 +1,21 @@
+{
+  "name": "patterntest",
+  "version": "1.0.0",
+  "description": "This Website is supposed to be an easy and fun way to explore creative Coding aswell as Web-Developement and perhaps in the future even Web-Design. The idea is to do short or long sprints in creative coding, in order to explore and get better at p5js. The focus there is not to get a single, perfect project, but rather a lot of projects, where i explore old and new concepts and learn new things on the go. In this file i also have multiple kind of things going on, to further explore VS-Code and Git. Through that i hope to understand and learn more about web-developement and how i can build a file, maybe in the future even how to organize such a file in a clever and clean way. But thats for later, when there is more stuff going on :) The whole thing is set up with the min.js library and included the tailwind cli, so i can work offline and am not dependet on internet access.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i input.css -o output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahbrother/Play-5-Docoumentation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahbrother/Play-5-Docoumentation/issues"
+  },
+  "homepage": "https://github.com/ahbrother/Play-5-Docoumentation#readme"
+}

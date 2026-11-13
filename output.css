@@ -8,15 +8,13 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-blue-50: oklch(97% 0.014 254.604);
+    --color-violet-200: oklch(89.4% 0.057 293.283);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --font-weight-black: 900;
@@ -188,8 +186,8 @@
   .sticky {
     position: sticky;
   }
-  .col-span-1 {
-    grid-column: span 1 / span 1;
+  .top-0 {
+    top: 0px;
   }
   .col-span-2 {
     grid-column: span 2 / span 2;
@@ -206,15 +204,6 @@
   .col-span-12 {
     grid-column: span 12 / span 12;
   }
-  .col-span-full {
-    grid-column: 1 / -1;
-  }
-  .col-start-1 {
-    grid-column-start: 1;
-  }
-  .col-start-2 {
-    grid-column-start: 2;
-  }
   .col-start-3 {
     grid-column-start: 3;
   }
@@ -224,53 +213,20 @@
   .col-start-5 {
     grid-column-start: 5;
   }
-  .col-start-9 {
-    grid-column-start: 9;
-  }
-  .row-auto {
-    grid-row: auto;
-  }
-  .row-span-1 {
-    grid-row: span 1 / span 1;
-  }
-  .row-span-2 {
-    grid-row: span 2 / span 2;
-  }
-  .row-start-1 {
-    grid-row-start: 1;
-  }
-  .row-start-2 {
-    grid-row-start: 2;
-  }
-  .row-start-3 {
-    grid-row-start: 3;
-  }
-  .row-start-4 {
-    grid-row-start: 4;
+  .col-start-8 {
+    grid-column-start: 8;
   }
   .row-start-5 {
     grid-row-start: 5;
   }
-  .row-start-6 {
-    grid-row-start: 6;
-  }
-  .row-end-1 {
-    grid-row-end: 1;
-  }
   .block {
     display: block;
-  }
-  .flex {
-    display: flex;
   }
   .grid {
     display: grid;
   }
   .table {
     display: table;
-  }
-  .w-full {
-    width: 100%;
   }
   .shrink {
     flex-shrink: 1;
@@ -281,17 +237,8 @@
   .resize {
     resize: both;
   }
-  .grid-flow-col {
-    grid-auto-flow: column;
-  }
-  .grid-flow-row {
-    grid-auto-flow: row;
-  }
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+  .scroll-mt-16 {
+    scroll-margin-top: calc(var(--spacing) * 16);
   }
   .grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -302,39 +249,21 @@
   .grid-rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
-  .grid-rows-3 {
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-  }
-  .grid-rows-12 {
-    grid-template-rows: repeat(12, minmax(0, 1fr));
-  }
-  .justify-around {
-    justify-content: space-around;
-  }
-  .justify-between {
-    justify-content: space-between;
+  .items-start {
+    align-items: flex-start;
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
-  .gap-x-4 {
-    column-gap: calc(var(--spacing) * 4);
-  }
   .gap-y-2 {
     row-gap: calc(var(--spacing) * 2);
   }
-  .gap-y-4 {
-    row-gap: calc(var(--spacing) * 4);
-  }
-  .self-end {
-    align-self: flex-end;
+  .scroll-smooth {
+    scroll-behavior: smooth;
   }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-  .border-red-500 {
-    border-color: var(--color-red-500);
   }
   .bg-black {
     background-color: var(--color-black);
@@ -342,21 +271,14 @@
   .bg-blue-50 {
     background-color: var(--color-blue-50);
   }
-  .object-contain {
-    object-fit: contain;
+  .bg-violet-200 {
+    background-color: var(--color-violet-200);
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
-  }
-  .pb-4 {
-    padding-bottom: calc(var(--spacing) * 4);
-  }
-  .align-baseline {
-    vertical-align: baseline;
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-6xl {
     font-size: var(--text-6xl);
@@ -370,17 +292,11 @@
     --tw-font-weight: var(--font-weight-black);
     font-weight: var(--font-weight-black);
   }
-  .whitespace-pre-line {
-    white-space: pre-line;
-  }
   .text-white {
     color: var(--color-white);
   }
   .italic {
     font-style: italic;
-  }
-  .underline {
-    text-decoration-line: underline;
   }
   .ring {
     --tw-ring-shadow: var(--tw-ring-inset, ) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
