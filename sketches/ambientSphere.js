@@ -1,9 +1,14 @@
 const ambientSphere = (p) => {
     let winkel = 45;
+    let container;
     p.setup = async () => {
-        p.createCanvas(455,600,p.WEBGL);
+        container = document.getElementById("ambientSphere");
+        p.createCanvas(container.clientWidth,container.clientHeight,p.WEBGL);
         p.angleMode(p.DEGREES);
 
+        new ResizeObserver(() => {
+        p.resizeCanvas(container.clientWidth, container.clientHeight)
+        }).observe(container)
     };
 
      

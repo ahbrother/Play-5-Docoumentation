@@ -19,8 +19,6 @@
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
     --font-weight-bold: 700;
@@ -217,17 +215,26 @@
   .col-start-5 {
     grid-column-start: 5;
   }
-  .col-start-8 {
-    grid-column-start: 8;
-  }
   .col-start-9 {
     grid-column-start: 9;
   }
-  .col-start-10 {
-    grid-column-start: 10;
-  }
-  .col-start-11 {
-    grid-column-start: 11;
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
   }
   .block {
     display: block;
@@ -238,8 +245,23 @@
   .table {
     display: table;
   }
+  .aspect-\[4\/3\] {
+    aspect-ratio: 4/3;
+  }
+  .aspect-\[6\/3\] {
+    aspect-ratio: 6/3;
+  }
+  .h-100 {
+    height: calc(var(--spacing) * 100);
+  }
+  .h-150 {
+    height: calc(var(--spacing) * 150);
+  }
   .h-full {
     height: 100%;
+  }
+  .w-100 {
+    width: calc(var(--spacing) * 100);
   }
   .w-full {
     width: 100%;
@@ -287,9 +309,6 @@
   .bg-blue-50 {
     background-color: var(--color-blue-50);
   }
-  .bg-orange-200 {
-    background-color: var(--color-orange-200);
-  }
   .bg-rose-200 {
     background-color: var(--color-rose-200);
   }
@@ -299,20 +318,11 @@
   .bg-violet-400 {
     background-color: var(--color-violet-400);
   }
-  .bg-violet-600 {
-    background-color: var(--color-violet-600);
-  }
   .bg-white {
     background-color: var(--color-white);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
-  }
-  .text-end {
-    text-align: end;
-  }
-  .text-right {
-    text-align: right;
   }
   .text-6xl {
     font-size: var(--text-6xl);

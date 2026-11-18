@@ -1,7 +1,13 @@
 const sphereSVG = (p) => {
+    let container;
 
 p.setup = () => {
-    p.createCanvas(455,600, p.WEBGL);
+    container = document.getElementById("sphereSVG")
+    p.createCanvas(container.clientWidth,container.clientHeight, p.WEBGL);
+
+    new ResizeObserver(() => {
+    p.resizeCanvas(container.clientWidth, container.clientHeight)
+    }).observe(container)
 }
 
 p.draw = () => {

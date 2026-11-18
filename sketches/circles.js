@@ -1,17 +1,21 @@
 const circles = (p) => {
-    let sound;
-    let amp;
 
+    let container;
 
-    p.setup = async () => {
-        p.createCanvas(455,600);
+    p.setup = () => {
+        container = document.getElementById("circles")
+        p.createCanvas(container.clientWidth,container.clientHeight);
         p.blendMode(p.DIFFERENCE);
 
+        new ResizeObserver(() => {
+        p.resizeCanvas(container.clientWidth, container.clientHeight)
+           }).observe(container)
+    };
 
     p.draw = function(){
         p.background(20);
 
-          let breite = p.map(p.noise(p.frameCount * 0.009), 0, 1,20,400);
+          let breite = p.map(p.noise(p.frameCount * 0.009), 0, 1,20,p.height);
             
         p.fill(255,0,0);
         p.stroke(0);
@@ -27,7 +31,5 @@ const circles = (p) => {
         };  
         
     };
-
-}
 
 new p5 (circles, "circles");

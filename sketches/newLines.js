@@ -1,20 +1,28 @@
+const newLines = (p) => {
 let lData;
 let tileWidth;
 let tileHeight;
+let container;
 
-async function newLines(p){
+p.setup = async function () {
     const raw = await p.loadJSON('/assets/output.json');
+    container = document.getElementById("newLines");
     lData = Array.from(raw).filter(d =>
     d.trend != null ); 
     
     
-    p.createCanvas(455,600);
-        p.angleMode(p.DEGREES);
+    p.createCanvas(container.clientWidth,container.clientHeight);
+    p.angleMode(p.DEGREES);
     p.textMode(p.CENTER,p.CENTER);
     p.background(20);
 
     tileWidth = p.width/30;
     tileHeight = p.height/3.5;
+
+    new ResizeObserver(() => {
+        p.resizeCanvas(container.clientWidth, container.clientHeight)
+        p.background(20);
+    }).observe(container)
 
     p.draw = function(){
 
@@ -68,6 +76,10 @@ async function newLines(p){
   
 }
 }
+
+}
+
+
 
 new p5(newLines, "newLines")
 

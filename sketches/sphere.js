@@ -1,15 +1,24 @@
 const sphere = (p) => {
     let winkel = 45;
-    p.setup = async () => {
-        p.createCanvas(455,600,p.WEBGL);
+    let container;
+
+    p.setup = () => {
+        container = document.getElementById("sphere");
+        p.createCanvas(container.clientWidth,container.clientHeight,p.WEBGL);
         p.angleMode(p.DEGREES);
-           p.background(20);
+        weiss = p.color(255,255,255);
+        p.background(20);
+
+           new ResizeObserver(() => {
+            p.resizeCanvas(container.clientWidth, container.clientHeight)
+            p.background(20);
+           }).observe(container)
     };
 
      
     p.draw = function(){
-        p.updateWinkel();
-        let weiss = p.color(255,255,255);
+        updateWinkel();
+        
      
         p.orbitControl();
         p.fill(weiss);
@@ -23,7 +32,7 @@ const sphere = (p) => {
 
     };
 
-    p.updateWinkel = ()=>{
+    updateWinkel = ()=>{
         if (p.mouseIsPressed){
             winkel += 0.5;
         }

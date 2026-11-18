@@ -1,16 +1,21 @@
 const interactiveLines = (p) => {
 let lineData;
+let container;
 let maxLength;
 let eX = 400;
 let eY = 300;
 
 p.setup = async () => {
     lineData = await p.loadJSON('/assets/output.json');
-    p.createCanvas(455,600);
+    container = document.getElementById("interactiveLines");
+    p.createCanvas(container.clientWidth, container.clientHeight);
 
-}
+    new ResizeObserver(() => {
+            p.resizeCanvas(container.clientWidth, container.clientHeight)
+           }).observe(container)
+    };
 
-p.draw = function(){
+    p.draw = function(){
     p.background(10);
     let x = 0;
     let y = 0;
@@ -45,6 +50,7 @@ p.draw = function(){
     }
 
 };
+
 function drawCircle(){
     p.fill(255,0,0,0);
     p.noStroke();
@@ -55,8 +61,11 @@ function updateCircle(){
     //here we give an offset to the y pos, otherwise it would be equal to x and only move on a straight line
     eY = p.map(p.noise(p.frameCount * 0.005 + 1000), 0, 1, 0, p.height);
 };
-
 }
+
+
+
+
 
 
 
